@@ -333,8 +333,8 @@ namespace CosmosDbExplorer.ViewModels
                                     IsRunning = false;
                                     SetStatusBar(new StatusBarInfo(response));
 
-                                    //await DispatcherHelper.RunAsync(() =>
-                                    //{
+                                    await DispatcherHelper.RunAsync(() =>
+                                    {
                                         SelectedDocument = null;
                                         foreach (var item in selectedDocuments)
                                         {
@@ -342,7 +342,7 @@ namespace CosmosDbExplorer.ViewModels
                                         }
 
                                         EditorViewModel.SetText(new { result = "Delete operation succeded!" }, HideSystemProperties);
-                                    //});
+                                    });
                                 }
                             }).ConfigureAwait(false);
                         },
@@ -474,8 +474,7 @@ namespace CosmosDbExplorer.ViewModels
                         Settings.Default.ExportFolder = (new FileInfo(result.FileName)).DirectoryName;
                         Settings.Default.Save();
 
-                        //await DispatcherHelper.RunAsync(() => File.WriteAllText(result.FileName, EditorViewModel.Content.Text));
-                        File.WriteAllText(result.FileName, EditorViewModel.Content.Text);
+                        await DispatcherHelper.RunAsync(() => File.WriteAllText(result.FileName, EditorViewModel.Content.Text));
                     }
                     catch (Exception ex)
                     {

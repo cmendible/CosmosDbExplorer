@@ -46,8 +46,8 @@ namespace CosmosDbExplorer.ViewModels
 
         private void OnContentTextChanged(string text)
         {
-            //DispatcherHelper.RunAsync(() =>
-            //{
+            DispatcherHelper.RunAsync(() =>
+            {
                 try
                 {
                     IsLoading = true;
@@ -61,7 +61,7 @@ namespace CosmosDbExplorer.ViewModels
                 {
                     IsLoading = false;
                 }
-            //});
+            });
         }
 
         public override void Cleanup()
@@ -283,8 +283,8 @@ namespace CosmosDbExplorer.ViewModels
             RuleFor(x => x.Content)
                 .Custom((content, ctx) =>
                 {
-                    //DispatcherHelper.RunAsync(() =>
-                    //{
+                    DispatcherHelper.RunAsync(() =>
+                    {
                         try
                         {
                             JsonConvert.DeserializeObject<IndexingPolicy>(content.Text);
@@ -293,7 +293,7 @@ namespace CosmosDbExplorer.ViewModels
                         {
                             ctx.AddFailure(ex.Message);
                         }
-                    //});
+                    });
                 });
         }
     }

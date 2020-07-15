@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Interop;
 using CommonServiceLocator;
+using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Messages;
 using CosmosDbExplorer.Services;
@@ -59,8 +60,7 @@ namespace CosmosDbExplorer.ViewModels
 
             if (node != null)
             {
-                //DispatcherHelper.RunAsync(() => Nodes.Remove(node));
-                Nodes.Remove(node);
+                DispatcherHelper.RunAsync(() => Nodes.Remove(node));
             }
         }
 

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Reactive.Linq;
+using CosmosDbExplorer.Infrastructure;
 using FluentValidation;
 using ICSharpCode.AvalonEdit.Document;
 using Newtonsoft.Json.Linq;
@@ -30,8 +31,7 @@ namespace CosmosDbExplorer.ViewModels.Assets
 
         private void OnContentTextChanged(string text)
         {
-            //DispatcherHelper.RunAsync(() => RaisePropertyChanged(nameof(Document)));
-            RaisePropertyChanged(nameof(Document));
+            DispatcherHelper.RunAsync(() => RaisePropertyChanged(nameof(Document)));
         }
 
         public StoredProcParameterKind Kind { get; set; }

@@ -215,8 +215,7 @@ namespace CosmosDbExplorer.ViewModels.Assets
                                 {
                                     IsBusy = true;
 
-                                    //await DispatcherHelper.RunAsync(() => File.WriteAllText(result.FileName, ResultViewModel.Content.Text));
-                                    File.WriteAllText(result.FileName, ResultViewModel.Content.Text);
+                                    await DispatcherHelper.RunAsync(() => File.WriteAllText(result.FileName, ResultViewModel.Content.Text));
                                 }
                                 catch (Exception ex)
                                 {

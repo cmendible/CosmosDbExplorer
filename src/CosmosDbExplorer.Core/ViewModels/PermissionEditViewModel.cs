@@ -190,8 +190,7 @@ namespace CosmosDbExplorer.ViewModels
                                     finally
                                     {
                                         Node.Parent.RefreshCommand.Execute(null);
-                                        //await DispatcherHelper.RunAsync(() => CloseCommand.Execute(null));
-                                        CloseCommand.Execute(null);
+                                        await DispatcherHelper.RunAsync(() => CloseCommand.Execute(null));
                                     }
                                 }
                             }).ConfigureAwait(false);

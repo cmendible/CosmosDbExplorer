@@ -274,8 +274,7 @@ namespace CosmosDbExplorer.ViewModels
                                     Settings.Default.ExportFolder = (new FileInfo(result.FileName)).DirectoryName;
                                     Settings.Default.Save();
 
-                                    //await DispatcherHelper.RunAsync(() => File.WriteAllText(result.FileName, EditorViewModel.Content.Text));
-                                    File.WriteAllText(result.FileName, EditorViewModel.Content.Text);
+                                    await DispatcherHelper.RunAsync(() => File.WriteAllText(result.FileName, EditorViewModel.Content.Text));
                                 }
                                 catch (Exception ex)
                                 {
@@ -323,8 +322,7 @@ namespace CosmosDbExplorer.ViewModels
                                          IsRunning = true;
                                          FileName = result.FileName;
 
-                                         //await DispatcherHelper.RunAsync(() => File.WriteAllText(result.FileName, Content.Text));
-                                         File.WriteAllText(result.FileName, Content.Text);
+                                         await DispatcherHelper.RunAsync(() => File.WriteAllText(result.FileName, Content.Text));
                                      }
                                      catch (Exception ex)
                                      {
@@ -339,8 +337,7 @@ namespace CosmosDbExplorer.ViewModels
                          }
                          else
                          {
-                             //await DispatcherHelper.RunAsync(() => File.WriteAllText(FileName, Content.Text));
-                             File.WriteAllText(FileName, Content.Text);
+                             await DispatcherHelper.RunAsync(() => File.WriteAllText(FileName, Content.Text));
                          }
                      },
                      param => !IsRunning && !string.IsNullOrEmpty(Content?.Text)));
@@ -373,8 +370,7 @@ namespace CosmosDbExplorer.ViewModels
                                      IsRunning = true;
                                      FileName = result.FileName;
                                      var txt = File.ReadAllText(result.FileName);
-                                     //await DispatcherHelper.RunAsync(() => Content.Text = txt);
-                                     Content.Text = txt;
+                                     await DispatcherHelper.RunAsync(() => Content.Text = txt);
                                  }
                                  catch (Exception ex)
                                  {

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Specialized;
+using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Infrastructure.Extensions;
 using CosmosDbExplorer.Infrastructure.JsonHelpers;
 using ICSharpCode.AvalonEdit.Document;
@@ -26,12 +27,12 @@ namespace CosmosDbExplorer.ViewModels
         {
             var text = GetDocumentContent(content, removeSystemProperties) ?? string.Empty;
 
-            //DispatcherHelper.RunAsync(() =>
-            //{
+            DispatcherHelper.RunAsync(() =>
+            {
                 Content.Text = text;
                 RaisePropertyChanged(() => HasContent);
                 IsDirty = false;
-            //});
+            });
         }
 
         protected abstract string GetDocumentContent(object content, bool removeSystemProperties);

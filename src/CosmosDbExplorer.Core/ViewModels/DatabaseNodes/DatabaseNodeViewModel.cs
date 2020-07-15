@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Reactive.Concurrency;
+using System.Threading.Tasks;
+using System.Windows.Threading;
 using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Views;
 using Microsoft.Azure.Documents;
@@ -30,8 +32,8 @@ namespace CosmosDbExplorer.ViewModels
 
             var collections = await DbService.GetCollectionsAsync(Parent.Connection, Database).ConfigureAwait(false);
 
-            //await DispatcherHelper.RunAsync(() =>
-            //{
+            await DispatcherHelper.RunAsync(() =>
+            {
                 Children.Add(new UsersNodeViewModel(Database, this));
 
                 if (IsDatabaseLevelThroughput)
@@ -43,7 +45,7 @@ namespace CosmosDbExplorer.ViewModels
                 {
                     Children.Add(new CollectionNodeViewModel(collection, this));
                 }
-            //});
+            });
 
             IsLoading = false;
         }

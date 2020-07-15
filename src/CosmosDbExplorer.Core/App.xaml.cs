@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using CommonServiceLocator;
+using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Services;
 using CosmosDbExplorer.ViewModels;
 using CosmosDbExplorer.ViewModels.Assets;
@@ -14,6 +15,11 @@ namespace CosmosDbExplorer
     /// </summary>
     public partial class App : Prism.DryIoc.PrismApplication
     {
+        static App()
+        {
+            DispatcherHelper.Initialize();
+        }
+
         protected override Window CreateShell()
         {
             var w = Container.Resolve<MainWindow>();

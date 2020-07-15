@@ -143,14 +143,14 @@ namespace CosmosDbExplorer.ViewModels
                                 {
                                     if (confirm)
                                     {
-                                        //await DispatcherHelper.RunAsync(async () =>
-                                        //{
+                                        await DispatcherHelper.RunAsync(async () =>
+                                        {
                                             using (var reader = File.OpenText(result.FileName))
                                             {
                                                 Content.FileName = result.FileName;
                                                 Content.Text = await reader.ReadToEndAsync().ConfigureAwait(true);
                                             }
-                                        //});
+                                        });
                                     }
                                 }).ConfigureAwait(false);
                         }

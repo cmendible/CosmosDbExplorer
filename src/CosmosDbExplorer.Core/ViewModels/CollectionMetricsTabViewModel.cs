@@ -108,8 +108,8 @@ namespace CosmosDbExplorer.ViewModels
                 Metrics = await _dbService.GetPartitionMetricsAsync(_connection, _collection).ConfigureAwait(false);
                 RequestCharge = $"Request Charge: {Metrics.RequestCharge:N2}";
 
-                //await DispatcherHelper.RunAsync(() =>
-                //{
+                await DispatcherHelper.RunAsync(() =>
+                {
                     var sorted = Metrics.PartitionMetrics.OrderBy(pm => int.Parse(pm.PartitionKeyRangeId)).ToArray();
                     Labels = sorted.Select(pm => pm.PartitionKeyRangeId).ToArray();
                     PartitionSizeSeries = new SeriesCollection
@@ -120,7 +120,7 @@ namespace CosmosDbExplorer.ViewModels
                             Values = new ChartValues<PartitionKeyRangeStatistics>(sorted)
                         }
                     };
-                //});
+                });
             }
             catch (DocumentClientException clientEx)
             {

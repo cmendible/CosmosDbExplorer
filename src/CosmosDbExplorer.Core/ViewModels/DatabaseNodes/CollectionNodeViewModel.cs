@@ -27,15 +27,15 @@ namespace CosmosDbExplorer.ViewModels
 
         protected override async Task LoadChildren()
         {
-            //await DispatcherHelper.RunAsync(() =>
-            //{
+            await DispatcherHelper.RunAsync(() =>
+            {
                 Children.Add(new DocumentNodeViewModel(this));
                 Children.Add(new ScaleSettingsNodeViewModel(this));
                 Children.Add(new StoredProcedureRootNodeViewModel(this));
                 Children.Add(new UserDefFuncRootNodeViewModel(this));
                 Children.Add(new TriggerRootNodeViewModel(this));
                 Children.Add(new CollectionMetricsNodeViewModel(this));
-            //});
+            });
         }
 
         public DocumentCollection Collection { get; }
@@ -70,8 +70,7 @@ namespace CosmosDbExplorer.ViewModels
                                         MessengerInstance.GetEvent<IsBusyMessage>().Publish(true);
                                         await DbService.CleanCollectionAsync(Parent.Parent.Connection, Collection).ConfigureAwait(false);
                                         MessengerInstance.GetEvent<IsBusyMessage>().Publish(false);
-                                        //await DispatcherHelper.RunAsync(async () => await DialogService.ShowMessageBox($"Collection {Parent.Name} is now empty.", "Cleanup collection").ConfigureAwait(false));
-                                        await DialogService.ShowMessageBox($"Collection {Parent.Name} is now empty.", "Cleanup collection").ConfigureAwait(false);
+                                        await DispatcherHelper.RunAsync(async () => await DialogService.ShowMessageBox($"Collection {Parent.Name} is now empty.", "Cleanup collection").ConfigureAwait(false));
                                     }
                                 }).ConfigureAwait(false);
                         }));
@@ -96,8 +95,7 @@ namespace CosmosDbExplorer.ViewModels
                                         await DbService.RecreateCollectionAsync(Parent.Parent.Connection, Parent.Database, Collection).ConfigureAwait(false);
                                         MessengerInstance.GetEvent<IsBusyMessage>().Publish(false);
                                         Parent.RefreshCommand.Execute(null);
-                                        //await DispatcherHelper.RunAsync(async () => await DialogService.ShowMessageBox($"Collection {Parent.Name} is now empty.", "Cleanup collection").ConfigureAwait(false));
-                                        await DialogService.ShowMessageBox($"Collection {Parent.Name} is now empty.", "Cleanup collection").ConfigureAwait(false);
+                                        await DispatcherHelper.RunAsync(async () => await DialogService.ShowMessageBox($"Collection {Parent.Name} is now empty.", "Cleanup collection").ConfigureAwait(false));
                                     }
                                 }).ConfigureAwait(false);
                         }));
@@ -164,8 +162,7 @@ namespace CosmosDbExplorer.ViewModels
                                         MessengerInstance.GetEvent<IsBusyMessage>().Publish(true);
                                         await DbService.DeleteCollectionAsync(Parent.Parent.Connection, Collection).ConfigureAwait(false);
                                         MessengerInstance.GetEvent<IsBusyMessage>().Publish(false);
-                                        //await DispatcherHelper.RunAsync(() => Parent.Children.Remove(this));
-                                        Parent.Children.Remove(this);
+                                        await DispatcherHelper.RunAsync(() => Parent.Children.Remove(this));
                                     }
                                 }).ConfigureAwait(false);
                         }

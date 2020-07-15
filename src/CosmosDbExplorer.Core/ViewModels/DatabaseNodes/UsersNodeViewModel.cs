@@ -36,11 +36,11 @@ namespace CosmosDbExplorer.ViewModels
                     ?? (_refreshCommand = new RelayCommand(
                         async () =>
                         {
-                            //await DispatcherHelper.RunAsync(async () =>
-                            //{
+                            await DispatcherHelper.RunAsync(async () =>
+                            {
                                 Children.Clear();
                                 await LoadChildren().ConfigureAwait(false);
-                            //});
+                            });
                         }));
             }
         }
@@ -61,13 +61,13 @@ namespace CosmosDbExplorer.ViewModels
 
             var users = await _dbService.GetUsersAsync(Parent.Parent.Connection, Database).ConfigureAwait(false);
 
-            //await DispatcherHelper.RunAsync(() =>
-            //{
+            await DispatcherHelper.RunAsync(() =>
+            {
                 foreach (var user in users)
                 {
                     Children.Add(new UserNodeViewModel(user, this));
                 }
-            //});
+            });
 
             IsLoading = false;
         }

@@ -32,11 +32,11 @@ namespace CosmosDbExplorer.ViewModels
                     ?? (_refreshCommand = new RelayCommand(
                         async () =>
                         {
-                            //await DispatcherHelper.RunAsync(async () =>
-                            //{
+                            await DispatcherHelper.RunAsync(async () =>
+                            {
                                 Children.Clear();
                                 await LoadChildren().ConfigureAwait(false);
-                            //});
+                            });
                         }));
             }
         }

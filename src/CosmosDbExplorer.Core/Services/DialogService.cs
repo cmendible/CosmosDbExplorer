@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows;
+using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Services.DialogSettings;
 using Microsoft.Win32;
 
@@ -30,52 +31,44 @@ namespace CosmosDbExplorer.Services
     {
         public Task ShowError(string message, string title, string buttonText, Action afterHideCallback)
         {
-            //DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Error));
-            MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+            DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Error));
             return Task.Run(() => afterHideCallback);
         }
 
         public Task ShowError(Exception error, string title, string buttonText, Action afterHideCallback)
         {
-            //DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, error.GetBaseException().Message, title, MessageBoxButton.OK, MessageBoxImage.Error));
-            MessageBox.Show(Application.Current.MainWindow, error.GetBaseException().Message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+            DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, error.GetBaseException().Message, title, MessageBoxButton.OK, MessageBoxImage.Error));
             return Task.Run(() => afterHideCallback);
         }
 
         public Task ShowMessage(string message, string title)
         {
-            //DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information));
-            MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information);
+            DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information));
             return Task.CompletedTask;
         }
 
         public Task ShowMessage(string message, string title, string buttonText, Action afterHideCallback)
         {
-            //DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information));
-            MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information);
+            DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information));
             return Task.Run(() => afterHideCallback);
         }
 
-        public Task<bool> ShowMessage(string message, string title, string buttonConfirmText, string buttonCancelText, Action<bool> afterHideCallback)
+        public async Task<bool> ShowMessage(string message, string title, string buttonConfirmText, string buttonCancelText, Action<bool> afterHideCallback)
         {
             var confirmed = false;
-            //await DispatcherHelper.RunAsync(() =>
-            //{
-            //    var result = MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.YesNo, MessageBoxImage.Question);
-            //    confirmed = result == MessageBoxResult.Yes;
-            //});
-
-            var result = MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.YesNo, MessageBoxImage.Question);
-            confirmed = result == MessageBoxResult.Yes;
+            await DispatcherHelper.RunAsync(() =>
+            {
+                var result = MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.YesNo, MessageBoxImage.Question);
+                confirmed = result == MessageBoxResult.Yes;
+            });
 
             afterHideCallback(confirmed);
-            return Task.FromResult(confirmed);
+            return confirmed;
         }
 
         public Task ShowMessageBox(string message, string title)
         {
-            //DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information));
-            MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information);
+            DispatcherHelper.RunAsync(() => MessageBox.Show(Application.Current.MainWindow, message, title, MessageBoxButton.OK, MessageBoxImage.Information));
             return Task.FromResult(0);
         }
 

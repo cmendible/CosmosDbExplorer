@@ -91,11 +91,11 @@ namespace CosmosDbExplorer.ViewModels.Assets
 
         protected void SetText(string content)
         {
-            //DispatcherHelper.RunAsync(() =>
-            //{
+            DispatcherHelper.RunAsync(() =>
+            {
                 Content = new TextDocument(content);
                 IsDirty = false;
-            //});
+            });
         }
 
         public RelayCommand DiscardCommand

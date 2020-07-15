@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Messages;
@@ -44,14 +45,13 @@ namespace CosmosDbExplorer.ViewModels
 
                 foreach (var db in Databases)
                 {
-                    //await DispatcherHelper.RunAsync(() => Children.Add(new DatabaseNodeViewModel(db, this)));
-                    Children.Add(new DatabaseNodeViewModel(db, this));
+                    await DispatcherHelper.RunAsync(() => Children.Add(new DatabaseNodeViewModel(db, this)));
                 }
             }
             catch (HttpRequestException ex)
             {
-                //await DispatcherHelper.RunAsync(async () => await _dialogService.ShowError(ex, "Error", null, null));
-                await _dialogService.ShowError(ex, "Error", null, null);
+                await DispatcherHelper.RunAsync(async () => await _dialogService.ShowError(ex, "Error", null, null));
+
             }
             finally
             {

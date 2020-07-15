@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Messages;
 using Microsoft.Azure.Documents;
 
@@ -21,8 +22,7 @@ namespace CosmosDbExplorer.ViewModels
 
             foreach (var func in function)
             {
-                //await DispatcherHelper.RunAsync(() => Children.Add(new UserDefFuncNodeViewModel(this, func)));
-                Children.Add(new UserDefFuncNodeViewModel(this, func));
+                await DispatcherHelper.RunAsync(() => Children.Add(new UserDefFuncNodeViewModel(this, func)));
             }
 
             IsLoading = false;
@@ -33,8 +33,7 @@ namespace CosmosDbExplorer.ViewModels
             if (message.IsNewResource)
             {
                 var item = new UserDefFuncNodeViewModel(this, message.Resource);
-                //DispatcherHelper.RunAsync(() => Children.Add(item));
-                Children.Add(item);
+                DispatcherHelper.RunAsync(() => Children.Add(item));
             }
             else
             {
@@ -63,8 +62,7 @@ namespace CosmosDbExplorer.ViewModels
                     if (confirm)
                     {
                         await DbService.DeleteUdfAsync(Parent.Parent.Parent.Parent.Connection, Resource.AltLink).ConfigureAwait(false);
-                        //await DispatcherHelper.RunAsync(() => Parent.Children.Remove(this));
-                        Parent.Children.Remove(this);
+                        await DispatcherHelper.RunAsync(() => Parent.Children.Remove(this));
                         MessengerInstance.GetEvent<CloseDocumentMessage>().Publish(ContentId);
                     }
                 });

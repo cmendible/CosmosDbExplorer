@@ -47,8 +47,7 @@ namespace CosmosDbExplorer.Infrastructure.Models
             {
                 if (this is IContent assetNode && assetNode.ContentId == altLink)
                 {
-                    //DispatcherHelper.RunAsync(() => Parent.Children.Remove(this));
-                    Parent.Children.Remove(this);
+                    DispatcherHelper.RunAsync(() => Parent.Children.Remove(this));
                 }
             }
         }

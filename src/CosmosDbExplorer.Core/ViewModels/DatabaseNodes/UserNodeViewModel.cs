@@ -34,13 +34,13 @@ namespace CosmosDbExplorer.ViewModels
 
             var permissions = await _dbService.GetPermissionAsync(Parent.Parent.Parent.Connection, User).ConfigureAwait(false);
 
-            //await DispatcherHelper.RunAsync(() =>
-            //{
+            await DispatcherHelper.RunAsync(() =>
+            {
                 foreach (var permission in permissions)
                 {
                     Children.Add(new PermissionNodeViewModel(permission, this));
                 }
-            //});
+            });
 
             IsLoading = false;
         }
@@ -53,11 +53,11 @@ namespace CosmosDbExplorer.ViewModels
                     ?? (_refreshCommand = new RelayCommand(
                         async () =>
                         {
-                            //await DispatcherHelper.RunAsync(async () =>
-                            //{
+                            await DispatcherHelper.RunAsync(async () =>
+                            {
                                 Children.Clear();
                                 await LoadChildren().ConfigureAwait(false);
-                            //});
+                            });
                         }));
         }
         }
