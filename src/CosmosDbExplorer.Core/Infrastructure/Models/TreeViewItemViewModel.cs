@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using CosmosDbExplorer.Messages;
-using CosmosDbExplorer.ViewModel;
+using CosmosDbExplorer.ViewModels;
 using Prism.Events;
 using Prism.Mvvm;
 

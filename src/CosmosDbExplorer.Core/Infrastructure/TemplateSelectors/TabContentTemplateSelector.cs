@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using CosmosDbExplorer.ViewModel;
-using CosmosDbExplorer.ViewModel.Assets;
+using CosmosDbExplorer.ViewModels;
+using CosmosDbExplorer.ViewModels.Assets;
 
 namespace CosmosDbExplorer.Infrastructure.TemplateSelectors
 {

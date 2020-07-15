@@ -7,7 +7,7 @@ using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Threading;
 using Microsoft.Azure.Documents;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public abstract class ResourceNodeViewModelBase<TParent> : TreeViewItemViewModel<TParent>, ICanRefreshNode
         where TParent : TreeViewItemViewModel

@@ -7,7 +7,7 @@ using Microsoft.Azure.Documents;
 using PropertyChanged;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel.Indexes
+namespace CosmosDbExplorer.ViewModels.Indexes
 {
     [InjectValidation]
     public class IndexViewModel : ObservableObject, IEquatable<IndexViewModel>

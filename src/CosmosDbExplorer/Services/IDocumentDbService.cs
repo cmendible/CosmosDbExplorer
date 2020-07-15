@@ -3,7 +3,7 @@ using Microsoft.Azure.Documents.Client;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CosmosDbExplorer.Infrastructure.Models;
-using CosmosDbExplorer.ViewModel.Interfaces;
+using CosmosDbExplorer.ViewModels.Interfaces;
 using System.Threading;
 
 namespace CosmosDbExplorer.Services

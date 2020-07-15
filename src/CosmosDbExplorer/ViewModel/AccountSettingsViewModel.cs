@@ -9,7 +9,7 @@ using FluentValidation;
 using GalaSoft.MvvmLight.Messaging;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     [InjectValidation]
     public class AccountSettingsViewModel : WindowViewModelBase

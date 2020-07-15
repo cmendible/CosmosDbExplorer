@@ -2,7 +2,7 @@
 using System.Windows.Threading;
 using AutoUpdaterDotNET;
 using CosmosDbExplorer.Properties;
-using CosmosDbExplorer.ViewModel;
+using CosmosDbExplorer.ViewModels;
 using Newtonsoft.Json;
 
 namespace CosmosDbExplorer

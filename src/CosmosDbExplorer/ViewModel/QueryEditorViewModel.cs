@@ -12,7 +12,7 @@ using CosmosDbExplorer.Infrastructure.Validar;
 using CosmosDbExplorer.Properties;
 using CosmosDbExplorer.Services;
 using CosmosDbExplorer.Services.DialogSettings;
-using CosmosDbExplorer.ViewModel.Interfaces;
+using CosmosDbExplorer.ViewModels.Interfaces;
 using FluentValidation;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Messaging;
@@ -23,7 +23,7 @@ using Microsoft.Azure.Documents.Client;
 using Newtonsoft.Json.Linq;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     [InjectValidation]
     public class QueryEditorViewModel : PaneWithZoomViewModel<CollectionNodeViewModel>

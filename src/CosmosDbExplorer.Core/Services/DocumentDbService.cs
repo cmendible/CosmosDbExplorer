@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Documents.Linq;
 using Newtonsoft.Json.Linq;
 using CosmosDbExplorer.Infrastructure.Models;
-using CosmosDbExplorer.ViewModel.Interfaces;
+using CosmosDbExplorer.ViewModels.Interfaces;
 using CosmosDbExplorer.Messages;
 using System.Threading;
 using CosmosDbExplorer.Infrastructure.Extensions;

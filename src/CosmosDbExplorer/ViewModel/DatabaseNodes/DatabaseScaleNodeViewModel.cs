@@ -3,7 +3,7 @@ using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Messages;
 using Microsoft.Azure.Documents;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public class DatabaseScaleNodeViewModel : TreeViewItemViewModel<DatabaseNodeViewModel>, IContent
     {

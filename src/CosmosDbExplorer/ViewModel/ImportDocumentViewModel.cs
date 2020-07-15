@@ -6,14 +6,14 @@ using CosmosDbExplorer.Infrastructure.Extensions;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Services;
 using CosmosDbExplorer.Services.DialogSettings;
-using CosmosDbExplorer.ViewModel.Interfaces;
+using CosmosDbExplorer.ViewModels.Interfaces;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 using ICSharpCode.AvalonEdit.Document;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public class ImportDocumentViewModel : PaneWithZoomViewModel<CollectionNodeViewModel>, IHaveRequestOptions
     {

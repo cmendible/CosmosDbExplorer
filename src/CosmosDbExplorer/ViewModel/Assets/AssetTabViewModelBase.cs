@@ -5,13 +5,13 @@ using CosmosDbExplorer.Infrastructure.Extensions;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Messages;
 using CosmosDbExplorer.Services;
-using CosmosDbExplorer.ViewModel.Interfaces;
+using CosmosDbExplorer.ViewModels.Interfaces;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 using ICSharpCode.AvalonEdit.Document;
 using Microsoft.Azure.Documents;
 
-namespace CosmosDbExplorer.ViewModel.Assets
+namespace CosmosDbExplorer.ViewModels.Assets
 {
     public abstract class AssetTabViewModelBase<TNode, TResource> : PaneWithZoomViewModel<TNode>, IAssetTabCommand
         where TNode : TreeViewItemViewModel, IAssetNode<TResource>

@@ -19,7 +19,7 @@ using Microsoft.Azure.Documents;
 using Newtonsoft.Json.Linq;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel.Assets
+namespace CosmosDbExplorer.ViewModels.Assets
 {
     [InjectValidation]
     public class StoredProcedureTabViewModel : AssetTabViewModelBase<StoredProcedureNodeViewModel, StoredProcedure>

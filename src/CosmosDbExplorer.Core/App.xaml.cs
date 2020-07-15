@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using CosmosDbExplorer.Services;
-using CosmosDbExplorer.ViewModel.Assets;
-using System.Windows;
-using Prism.Ioc;
-using CosmosDbExplorer.ViewModel;
+﻿using System.Windows;
 using CommonServiceLocator;
+using CosmosDbExplorer.Services;
+using CosmosDbExplorer.ViewModels;
+using CosmosDbExplorer.ViewModels.Assets;
+using CosmosDbExplorer.Views;
 using Prism.DryIoc;
+using Prism.Ioc;
 
 namespace CosmosDbExplorer
 {

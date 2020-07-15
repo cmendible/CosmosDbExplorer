@@ -1,4 +1,4 @@
-﻿using CosmosDbExplorer.ViewModel;
+﻿using CosmosDbExplorer.ViewModels;
 using Prism.Events;
 
 namespace CosmosDbExplorer.Messages

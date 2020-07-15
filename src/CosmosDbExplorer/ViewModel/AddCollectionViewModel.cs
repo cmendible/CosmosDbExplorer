@@ -14,7 +14,7 @@ using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Azure.Documents;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     [InjectValidation]
     public class AddCollectionViewModel : WindowViewModelBase

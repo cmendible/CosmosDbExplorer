@@ -5,7 +5,7 @@ using GalaSoft.MvvmLight;
 using Microsoft.Azure.Documents;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel.Indexes
+namespace CosmosDbExplorer.ViewModels.Indexes
 {
     [InjectValidation]
     public class ExcludedPathViewModel : ObservableObject, System.IEquatable<ExcludedPathViewModel>

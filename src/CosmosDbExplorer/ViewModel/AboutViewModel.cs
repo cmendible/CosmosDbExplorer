@@ -6,7 +6,7 @@ using System.Reflection;
 using CosmosDbExplorer.Infrastructure.Models;
 using GalaSoft.MvvmLight;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public class AboutViewModel : ViewModelBase
     {

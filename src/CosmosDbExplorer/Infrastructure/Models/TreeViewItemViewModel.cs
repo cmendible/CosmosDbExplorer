@@ -4,7 +4,7 @@ using GalaSoft.MvvmLight.Messaging;
 using System.Threading.Tasks;
 using CosmosDbExplorer.Messages;
 using GalaSoft.MvvmLight.Threading;
-using CosmosDbExplorer.ViewModel;
+using CosmosDbExplorer.ViewModels;
 
 namespace CosmosDbExplorer.Infrastructure.Models
 {

@@ -14,7 +14,7 @@ using Microsoft.Azure.Documents;
 using PropertyChanged;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     [InjectValidation]
     public class DatabaseScaleTabViewModel : PaneWithZoomViewModel<DatabaseScaleNodeViewModel>

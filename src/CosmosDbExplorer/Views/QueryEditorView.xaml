@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CosmosDbExplorer.Views"
              xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
-             xmlns:vm="clr-namespace:CosmosDbExplorer.ViewModel"
+             xmlns:vm="clr-namespace:CosmosDbExplorer.ViewModels"
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              xmlns:controls="clr-namespace:CosmosDbExplorer.Infrastructure.AvalonEdit"
              xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"

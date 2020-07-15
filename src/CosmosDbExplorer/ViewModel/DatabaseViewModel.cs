@@ -9,7 +9,7 @@ using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 using GongSolutions.Wpf.DragDrop;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public class DatabaseViewModel : ToolViewModel, IDropTarget
     {

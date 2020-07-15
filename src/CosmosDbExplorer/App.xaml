@@ -48,7 +48,7 @@
         <!--Also add the base theme, this is required always-->
         <ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/base.xaml" />
       </ResourceDictionary.MergedDictionaries>
-      <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:CosmosDbExplorer.ViewModel" />
+      <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:CosmosDbExplorer.ViewModels" />
       <converters:BoolToVisibilityConverter x:Key="boolToVisibilityConverter" />
       <converters:NullToVisibilityConverter x:Key="nullToVisibilityConverter" />
       <converters:ActiveDocumentConverter x:Key="ActiveDocumentConverter" />

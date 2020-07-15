@@ -1,5 +1,5 @@
 ﻿using CosmosDbExplorer.Infrastructure.Models;
-using CosmosDbExplorer.ViewModel;
+using CosmosDbExplorer.ViewModels;
 using Microsoft.Azure.Documents;
 using Prism.Events;
 

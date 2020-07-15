@@ -5,7 +5,7 @@ using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Infrastructure.Extensions;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Services;
-using CosmosDbExplorer.ViewModel.Interfaces;
+using CosmosDbExplorer.ViewModels.Interfaces;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 using LiveCharts;
@@ -13,7 +13,7 @@ using LiveCharts.Configurations;
 using LiveCharts.Wpf;
 using Microsoft.Azure.Documents;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public class CollectionMetricsTabViewModel : PaneViewModel<CollectionMetricsNodeViewModel>, ICanRefreshTab
     {

@@ -9,7 +9,7 @@ using ICSharpCode.AvalonEdit.Document;
 using Newtonsoft.Json.Linq;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel.Assets
+namespace CosmosDbExplorer.ViewModels.Assets
 {
     [InjectValidation]
     public class StoredProcParameterViewModel : ObservableObject, IDisposable

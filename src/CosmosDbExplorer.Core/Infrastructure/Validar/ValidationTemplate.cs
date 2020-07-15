@@ -19,13 +19,13 @@ namespace CosmosDbExplorer.Infrastructure.Validar
         {
             _target = target;
             _validator = ValidationFactory.GetValidator<T>();
-            _validationResult = _validator.Validate(target);
+            //_validationResult = _validator.Validate(target);
             target.PropertyChanged += Validate;
         }
 
         private void Validate(object sender, PropertyChangedEventArgs e)
         {
-            _validationResult = _validator.Validate(_target);
+            //_validationResult = _validator.Validate(_target);
             foreach (var error in _validationResult.Errors)
             {
                 RaiseErrorsChanged(error.PropertyName);

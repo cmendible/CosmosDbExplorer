@@ -4,7 +4,7 @@ using CosmosDbExplorer.Services;
 using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Azure.Documents;
 
-namespace CosmosDbExplorer.ViewModel.Assets
+namespace CosmosDbExplorer.ViewModels.Assets
 {
     public class UserDefFuncTabViewModel : AssetTabViewModelBase<UserDefFuncNodeViewModel, UserDefinedFunction>
     {

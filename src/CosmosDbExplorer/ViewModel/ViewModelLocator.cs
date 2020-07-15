@@ -14,12 +14,12 @@
 
 using CommonServiceLocator;
 using CosmosDbExplorer.Services;
-using CosmosDbExplorer.ViewModel.Assets;
+using CosmosDbExplorer.ViewModels.Assets;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Messaging;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     /// <summary>
     /// This class contains static references to all the view models in the

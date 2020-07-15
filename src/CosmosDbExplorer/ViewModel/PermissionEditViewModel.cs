@@ -4,14 +4,14 @@ using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Infrastructure.Extensions;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Services;
-using CosmosDbExplorer.ViewModel.Interfaces;
+using CosmosDbExplorer.ViewModels.Interfaces;
 using FluentValidation;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 using Microsoft.Azure.Documents;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     [InjectValidation]
     public class PermissionEditViewModel : PaneViewModel<PermissionNodeViewModel>, IAssetTabCommand

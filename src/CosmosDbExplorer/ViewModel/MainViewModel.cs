@@ -9,14 +9,14 @@ using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Messages;
 using CosmosDbExplorer.Services;
-using CosmosDbExplorer.ViewModel.Assets;
-using CosmosDbExplorer.ViewModel.Interfaces;
+using CosmosDbExplorer.ViewModels.Assets;
+using CosmosDbExplorer.ViewModels.Interfaces;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.

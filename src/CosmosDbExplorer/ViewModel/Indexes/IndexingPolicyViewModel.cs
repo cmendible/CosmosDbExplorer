@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using PropertyChanged;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel.Indexes
+namespace CosmosDbExplorer.ViewModels.Indexes
 {
     [InjectValidation]
     public class IndexingPolicyViewModel : ObservableObject

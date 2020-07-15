@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using CosmosDbExplorer.ViewModel;
+using CosmosDbExplorer.ViewModels;
 
 namespace CosmosDbExplorer.Views
 {

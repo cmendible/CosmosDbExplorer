@@ -4,7 +4,7 @@ using CosmosDbExplorer.Views;
 using GalaSoft.MvvmLight.Threading;
 using Microsoft.Azure.Documents;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public class DatabaseNodeViewModel : ResourceNodeViewModelBase<ConnectionNodeViewModel>
     {

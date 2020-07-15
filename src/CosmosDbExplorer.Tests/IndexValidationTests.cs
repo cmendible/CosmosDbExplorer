@@ -1,4 +1,4 @@
-﻿using CosmosDbExplorer.ViewModel.Indexes;
+﻿using CosmosDbExplorer.ViewModels.Indexes;
 using FluentValidation.TestHelper;
 using System;
 using Xunit;

@@ -3,7 +3,7 @@ using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Messages;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public class DocumentNodeViewModel : TreeViewItemViewModel<CollectionNodeViewModel>, IHaveCollectionNodeViewModel, IContent
     {

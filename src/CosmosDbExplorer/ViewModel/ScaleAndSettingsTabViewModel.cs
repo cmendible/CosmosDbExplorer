@@ -7,7 +7,7 @@ using CosmosDbExplorer.Infrastructure;
 using CosmosDbExplorer.Infrastructure.Extensions;
 using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Services;
-using CosmosDbExplorer.ViewModel.Indexes;
+using CosmosDbExplorer.ViewModels.Indexes;
 using FluentValidation;
 using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
@@ -17,7 +17,7 @@ using Newtonsoft.Json;
 using PropertyChanged;
 using Validar;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     [InjectValidation]
     public class ScaleAndSettingsTabViewModel : PaneWithZoomViewModel<ScaleSettingsNodeViewModel>

@@ -8,7 +8,7 @@
              xmlns:local="clr-namespace:CosmosDbExplorer.Views"
              xmlns:dd="urn:gong-wpf-dragdrop"
              xmlns:behaviors="clr-namespace:CosmosDbExplorer.Infrastructure.Behaviors"
-             xmlns:vm="clr-namespace:CosmosDbExplorer.ViewModel"
+             xmlns:vm="clr-namespace:CosmosDbExplorer.ViewModels"
              xmlns:gif="http://wpfanimatedgif.codeplex.com"
              DataContext="{Binding Database, Source={StaticResource Locator}}"
              mc:Ignorable="d" 

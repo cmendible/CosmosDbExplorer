@@ -4,7 +4,7 @@ using CosmosDbExplorer.Infrastructure.Models;
 using CosmosDbExplorer.Messages;
 using GalaSoft.MvvmLight.Messaging;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public class ScaleSettingsNodeViewModel : TreeViewItemViewModel<CollectionNodeViewModel>, IHaveCollectionNodeViewModel, IContent
     {

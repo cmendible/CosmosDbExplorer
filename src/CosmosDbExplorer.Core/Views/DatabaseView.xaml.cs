@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using CosmosDbExplorer.ViewModel;
+using CosmosDbExplorer.ViewModels;
 
 namespace CosmosDbExplorer.Views
 {

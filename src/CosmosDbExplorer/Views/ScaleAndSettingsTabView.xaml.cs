@@ -4,7 +4,7 @@ using System.Windows.Media;
 using System.Windows.Threading;
 using System.Xml;
 using CosmosDbExplorer.Infrastructure.AvalonEdit;
-using CosmosDbExplorer.ViewModel;
+using CosmosDbExplorer.ViewModels;
 using ICSharpCode.AvalonEdit.Folding;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit.Highlighting.Xshd;

@@ -11,7 +11,7 @@ using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Threading;
 using Microsoft.Azure.Documents;
 
-namespace CosmosDbExplorer.ViewModel
+namespace CosmosDbExplorer.ViewModels
 {
     public abstract class AssetRootNodeViewModelBase<TResource> : TreeViewItemViewModel<CollectionNodeViewModel>, ICanRefreshNode, IHaveCollectionNodeViewModel
         where TResource : Resource

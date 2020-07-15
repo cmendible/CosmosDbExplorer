@@ -1,5 +1,5 @@
 ﻿using CosmosDbExplorer.Services;
-using CosmosDbExplorer.ViewModel;
+using CosmosDbExplorer.ViewModels;
 using Prism.Events;
 using PropertyChanged;
 
