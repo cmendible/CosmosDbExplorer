@@ -1,0 +1,255 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+
+    <RootNamespace>CosmosDbExplorer</RootNamespace>
+    <AssemblyName>CosmosDbExplorer</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\loading.gif" />
+    <None Remove="Infrastructure\AvalonEdit\DocumentDbSql.xshd" />
+    <None Remove="Infrastructure\AvalonEdit\JSON.xshd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Infrastructure\AvalonEdit\DocumentDbSql.xshd" />
+    <EmbeddedResource Include="Infrastructure\AvalonEdit\JSON.xshd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DryIoc.CommonServiceLocator" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.11.2" />
+    <PackageReference Include="Prism.DryIoc" Version="7.2.0.1422" />
+    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\loading.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AboutView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AccountSettingsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddCollectionView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CollectionMetricsTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Controls\ThroughputControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DatabaseScaleTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DatabaseView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DocumentsTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ImportDocumentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\JsonEditorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PartitionMetricChartTooltip.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PermissionEditView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\QueryEditorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ScaleAndSettingsTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\StoredProcedureTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TriggerTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserDefFuncTabView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserEditView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autoupdater.NET.Official">
+      <Version>1.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="AvalonEdit">
+      <Version>5.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Expression.Blend.Sdk">
+      <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Extended.Wpf.Toolkit">
+      <Version>3.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Fluent.Ribbon">
+      <Version>6.1.0.326</Version>
+    </PackageReference>
+    <PackageReference Include="FluentValidation">
+      <Version>8.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Fody">
+      <Version>4.2.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="gong-wpf-dragdrop">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="LiveCharts.Wpf">
+      <Version>0.9.7</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="PropertyChanged.Fody">
+      <Version>2.6.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.5.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http.WinHttpHandler">
+      <Version>4.5.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Numerics.Vectors">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reactive.Core">
+      <Version>4.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reactive.Interfaces">
+      <Version>4.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reactive.Linq">
+      <Version>4.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reactive.PlatformServices">
+      <Version>4.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reactive.Windows.Threading">
+      <Version>4.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Algorithms">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.X509Certificates">
+      <Version>4.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="Validar.Fody">
+      <Version>1.7.4</Version>
+    </PackageReference>
+    <PackageReference Include="WpfAnimatedGif">
+      <Version>1.4.18</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Views\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AccountSettingsView.xaml.cs">
+      <DependentUpon>AccountSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AddCollectionView.xaml.cs">
+      <DependentUpon>AddCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CollectionMetricsTabView.xaml.cs">
+      <DependentUpon>CollectionMetricsTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Controls\ThroughputControl.xaml.cs">
+      <DependentUpon>ThroughputControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DatabaseScaleTabView.xaml.cs">
+      <DependentUpon>DatabaseScaleTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DatabaseView.xaml.cs">
+      <DependentUpon>DatabaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DocumentsTabView.xaml.cs">
+      <DependentUpon>DocumentsTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ImportDocumentView.xaml.cs">
+      <DependentUpon>ImportDocumentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\JsonEditorView.xaml.cs">
+      <DependentUpon>JsonEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PartitionMetricChartTooltip.xaml.cs">
+      <DependentUpon>PartitionMetricChartTooltip.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PermissionEditView.xaml.cs">
+      <DependentUpon>PermissionEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\QueryEditorView.xaml.cs">
+      <DependentUpon>QueryEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ScaleAndSettingsTabView.xaml.cs">
+      <DependentUpon>ScaleAndSettingsTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StoredProcedureTabView.xaml.cs">
+      <DependentUpon>StoredProcedureTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\TriggerTabView.xaml.cs">
+      <DependentUpon>TriggerTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UserDefFuncTabView.xaml.cs">
+      <DependentUpon>UserDefFuncTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\UserEditView.xaml.cs">
+      <DependentUpon>UserEditView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>
