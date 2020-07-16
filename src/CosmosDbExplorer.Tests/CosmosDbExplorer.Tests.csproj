@@ -19,8 +19,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CosmosDbExplorer\CosmosDbExplorer.csproj" />
-  </ItemGroup>
-
 </Project>

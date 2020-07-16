@@ -31,7 +31,6 @@ namespace CosmosDbExplorer
             ServiceLocator.SetLocatorProvider(() => new DryIocServiceLocatorAdapter(containerRegistry.GetContainer()));
 
             containerRegistry.Register<Services.IDialogService, DialogService>();
-            //containerRegistry.Register<IMessenger, Messenger>();
             containerRegistry.Register<IDocumentDbService, DocumentDbService>();
             containerRegistry.Register<ISettingsService, SettingsService>();
             containerRegistry.Register<IUIServices, UIServices>();
